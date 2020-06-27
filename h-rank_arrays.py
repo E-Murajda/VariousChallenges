@@ -45,8 +45,6 @@ def minimumBribes(q):
 
 '''Minimum Swaps 2'''
 
-arr = [1, 3, 5, 2, 4, 6, 7]
-
 
 def minimumSwaps(arr):
     counter = 0
@@ -61,8 +59,6 @@ def minimumSwaps(arr):
 
 
 '''Array Manipulation'''
-queries = [[1, 2, 100], [2, 5, 100], [3, 4, 100]]
-n = 5
 
 
 def arrayManipulation(n, queries):
