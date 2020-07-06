@@ -16,8 +16,6 @@ def ransom_note(magazine, note):
 
 
 '''Two Strings'''
-s1 = 'hello'
-s2 = 'world'
 
 
 def twoStrings(s1, s2):
