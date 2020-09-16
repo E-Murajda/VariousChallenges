@@ -1,8 +1,10 @@
 
 
-
 """Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). 
 Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present."""
+
+
+import sys
 
 
 def spin_words(sentence):
@@ -48,17 +50,19 @@ def longest(s1, s2):
     return new
 
 
-
 '''Bit Counting
 Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. 
 You can guarantee that input is non-negative.'''
+
+
 def countBits(n):
     b = list(bin(n))
     count = b.count('1')
     return count
-#one line
-#return bin(n).count("1")
-print((countBits(1234)))
+
+
+# one line
+# return bin(n).count("1")
 
 
 '''Take a Ten Minute Walk'''
@@ -69,21 +73,21 @@ You always walk only a single block in a direction and you know it takes you one
 that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of 
 course, return you to your starting point. Return false otherwise.'''
 
+
 def is_valid_walk(walk):
     vertical = 0
     horizontal = 0
-    
-    
+
     if (len(walk) == 10):
         for i in walk:
             if i == 'n':
-                vertical+=1
+                vertical += 1
             if i == 's':
-                vertical-=1
+                vertical -= 1
             if i == 'w':
-                horizontal+=1
+                horizontal += 1
             if i == 'e':
-                horizontal-=1
+                horizontal -= 1
     else:
         return False
     return(vertical == 0 and horizontal == 0)
@@ -92,40 +96,29 @@ def is_valid_walk(walk):
 '''Shortest Word'''
 '''Simple, given a string of words, return the length of the shortest word(s).'''
 
+
 def find_short(s):
     s = s.split()
     new_l = [len(i) for i in s]
     return min(new_l)
 
-print(find_short("bitcoin take over the world maybe who knows perhaps"))
 
+'''Consider a list (list = []). You can perform the following commands:
 
+insert i e: Insert integer  at position .
+print: Print the list.
+remove e: Delete the first occurrence of integer .
+append e: Insert integer  at the end of the list.
+sort: Sort the list.
+pop: Pop the last element from the list.
+reverse: Reverse the list.
+Initialize your list and read in the value of  followed by  lines of commands where each command will be of the  types listed above. Iterate through each command in order and perform the corresponding operation on your list.
 
+Input Format
 
+The first line contains an integer, , denoting the number of commands.
+Each line  of the  subsequent lines contains one of the commands described'''
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+with open('STDIN.txt', 'r') as f:
+    line = [x.rstrip() for x in f]
+    print(repr(line))
